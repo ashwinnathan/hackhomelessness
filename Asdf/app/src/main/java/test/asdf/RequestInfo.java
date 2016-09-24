@@ -1,33 +1,23 @@
 package test.asdf;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
-    private Button request;
-    private Button give;
-
-
+/**
+ * Created by jzou on 9/24/16.
+ */
+public class RequestInfo extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home);
+        setContentView(R.layout.req_info);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
-        request = (Button)findViewById(R.id.request);
-        give = (Button)findViewById(R.id.give);
-        request.setOnClickListener(this);
-        give.setOnClickListener(this);
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -59,13 +49,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void onClick(View view)
-    {
-        if(view == request)
-        {
-            startActivity(new Intent(this, RequestInfo.class));
-        }
     }
 }
