@@ -23,9 +23,8 @@
             android:label="Asdf"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-
-
-
+        <activity android:name=".GiveInfo"
+            android:label="Asdf" android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

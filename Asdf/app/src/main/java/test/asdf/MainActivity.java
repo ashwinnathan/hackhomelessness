@@ -63,9 +63,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void onClick(View view)
     {
-        if(view == give)
+        if(view == request)
         {
             startActivity(new Intent(this, RequestInfo.class));
+        }
+        if(view == give)
+        {
             startActivity(new Intent(this,GiveInfo.class));
         }
     }
