@@ -1,22 +1,29 @@
 package test.asdf;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 
 /**
  * Created by jzou on 9/24/16.
  */
-public class RequestInfo extends AppCompatActivity{
+public class RequestInfo extends AppCompatActivity implements View.OnClickListener{
+
+
+    private Button done;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.req_info);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-
+        done = (Button)findViewById(R.id.donebutton);
+        done.setOnClickListener(this);
         setSupportActionBar(toolbar);
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -50,4 +57,13 @@ public class RequestInfo extends AppCompatActivity{
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void onClick(View view)
+    {
+        if ( view == done)
+        {
+            startActivity(new Intent(this,Request_Choices.class));
+        }
+    }
+
 }
