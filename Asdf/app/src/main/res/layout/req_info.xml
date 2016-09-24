@@ -40,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Name: "
-                    android:id="@+id/textView2"
+                    android:id="@+id/nametag"
                     android:textSize="30dp" />
 
                 <EditText
@@ -59,7 +59,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Phone:"
-                    android:id="@+id/textView4"
+                    android:id="@+id/phonetag"
                     android:textSize="30dp" />
 
                 <EditText
@@ -77,15 +77,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="About yourself"
-                    android:id="@+id/textView3"
+                    android:id="@+id/abouttag"
                     android:textSize="30dp" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText"
+                    android:id="@+id/about"
                     android:editable="false"
-                    android:hint="share your story..." />
+                    android:hint="share your story..."
+                    android:text="about" />
 
                 <Button
                     android:layout_width="wrap_content"

@@ -19,8 +19,8 @@
         android:background="@color/blu"
         android:textColor="@color/white"
         android:layout_alignTop="@+id/request"
-        android:layout_toLeftOf="@+id/textView"
-        android:layout_toStartOf="@+id/textView" />
+        android:layout_toLeftOf="@+id/homehelp"
+        android:layout_toStartOf="@+id/homehelp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -31,8 +31,8 @@
         android:background="@color/red"
         android:layout_marginBottom="85dp"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView" />
+        android:layout_toRightOf="@+id/homehelp"
+        android:layout_toEndOf="@+id/homehelp" />
 
     <ImageView
         android:layout_width="10dp"
@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Help"
-        android:id="@+id/textView"
+        android:id="@+id/homehelp"
         android:textSize="50dp"
         android:textColor="@color/white"
         android:layout_above="@+id/bottomline"
