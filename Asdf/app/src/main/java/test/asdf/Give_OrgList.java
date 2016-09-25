@@ -76,7 +76,7 @@ public class Give_OrgList extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view)
     {
         if ( view == organize){
-            startActivity(new Intent(this,Give_OrgSelect.class));
+            startActivity(new Intent(this,Give_OrgLogin.class));
         }
     }
 

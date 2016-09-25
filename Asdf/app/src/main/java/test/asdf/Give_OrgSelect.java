@@ -37,7 +37,7 @@ public class Give_OrgSelect extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.give_orgselect);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
-        confirmbutton = (Button)findViewById(R.id.confirmbutton);
+        confirmbutton = (Button)findViewById(R.id.confirm);
         confirmbutton.setOnClickListener(this);
         setSupportActionBar(toolbar);
 

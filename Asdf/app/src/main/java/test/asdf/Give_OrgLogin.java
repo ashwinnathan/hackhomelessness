@@ -38,7 +38,7 @@ public class Give_OrgLogin extends AppCompatActivity implements View.OnClickList
 
         setContentView(R.layout.give_orglogin);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        signup = (Button)findViewById(R.id.signupButton);
+        signup = (Button)findViewById(R.id.confirmbutton);
         name = (EditText)findViewById(R.id.nameInputField);
         signup.setOnClickListener(this);
         setSupportActionBar(toolbar);
