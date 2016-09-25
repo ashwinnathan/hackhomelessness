@@ -21,9 +21,7 @@ public class Give_OrgLogin extends AppCompatActivity implements View.OnClickList
 
 
     private Button signup;
-
-    private EditText name;
-
+    
     private GoogleApiClient client;
     private DatabaseReference firebaseRef;
 
@@ -36,7 +34,7 @@ public class Give_OrgLogin extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.req_info);
+        setContentView(R.layout.give_orglogin);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         signup = (Button)findViewById(R.id.signupButton);
         name = (EditText)findViewById(R.id.nameInputField);
