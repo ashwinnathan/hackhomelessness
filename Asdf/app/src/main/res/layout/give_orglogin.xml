@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:paddingTop="40dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name of Organization"
+        android:ems="10"
+        android:id="@+id/orgInputLabel"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="14dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="30dp"
+        android:password="false"
+        android:textIsSelectable="false"
+        android:phoneNumber="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/nameInputField"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:hint="Club/Group Name"
+        android:layout_below="@+id/orgInputLabel"
+        android:layout_alignLeft="@+id/emailInput"
+        android:layout_alignStart="@+id/emailInput"
+        android:inputType="textShortMessage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Email"
+        android:ems="10"
+        android:id="@+id/editText5"
+        android:layout_below="@+id/nameInputField"
+        android:layout_alignLeft="@+id/orgInputLabel"
+        android:layout_alignStart="@+id/orgInputLabel"
+        android:layout_marginTop="10dp"
+        android:textSize="30dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/emailInput"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:hint="Organization Email"
+        android:layout_marginTop="43dp"
+        android:layout_alignTop="@+id/editText5"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Event Name"
+        android:ems="10"
+        android:layout_marginTop="17dp"
+        android:id="@+id/eventNameLabel"
+        android:layout_below="@+id/emailInput"
+        android:layout_alignLeft="@+id/editText5"
+        android:layout_alignStart="@+id/editText5"
+        android:textSize="30dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/eventNameInput"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:hint="Name of Event"
+        android:layout_below="@+id/eventNameLabel"
+        android:layout_alignLeft="@+id/emailInput"
+        android:layout_alignStart="@+id/emailInput"
+        android:inputType="textShortMessage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Description of Event"
+        android:ems="10"
+        android:layout_below="@+id/eventNameInput"
+        android:layout_alignRight="@+id/eventNameLabel"
+        android:layout_alignEnd="@+id/eventNameLabel"
+        android:layout_marginTop="15dp"
+        android:id="@+id/eventDescriptionLabel"
+        android:textSize="30dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/editText10"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:hint="Event Description"
+        android:layout_below="@+id/eventDescriptionLabel"
+        android:layout_alignLeft="@+id/eventNameInput"
+        android:layout_alignStart="@+id/eventNameInput"
+        android:inputType="textLongMessage" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="Confirm"
+        android:id="@+id/confirmbutton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        android:background="@color/blu" />
+
+</RelativeLayout>
