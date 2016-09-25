@@ -36,14 +36,14 @@
         android:layout_alignLeft="@+id/nameLabel"
         android:layout_alignStart="@+id/nameLabel"
         android:layout_marginTop="23dp"
-        android:id="@+id/phone#Label" />
+        android:id="@+id/phoneNumLabel" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:ems="10"
-        android:id="@+id/phone#Input"
+        android:id="@+id/phoneNumInput"
         android:layout_below="@+id/phone#Label"
         android:layout_alignLeft="@+id/nameInput"
         android:layout_alignStart="@+id/nameInput"
