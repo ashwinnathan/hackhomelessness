@@ -15,7 +15,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Will match a student with you to have someone to talk to or request for specific help (writing resumes, advice for jobs, etc)"
+        android:text="Will match a person with you to have someone to talk to or request for specific help (writing resumes, advice for jobs, etc)"
         android:id="@+id/textView"
         android:layout_below="@+id/talk"
         android:layout_centerHorizontal="true"
@@ -69,7 +69,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Will place your request for organizations to see and you will receive a text if your request is fulfilled by anyone"
+        android:text="Will place your request for organizations to see and you will receive a text if your request is fulfilled"
         android:id="@+id/textView2"
         android:textSize="20dp"
         android:layout_above="@+id/button3"

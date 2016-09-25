@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your request has been placed. You will be notified via text if it is fulfilled."
+        android:id="@+id/textView4"
+        android:textSize="30dp"
+        android:layout_marginTop="98dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="Make another request"
+        android:id="@+id/button4"
+        android:layout_marginTop="82dp"
+        android:textSize="20dp"
+        android:background="@color/red"
+        android:textColor="@color/white"
+        android:layout_below="@+id/textView4"
+        android:layout_alignLeft="@+id/button5"
+        android:layout_alignStart="@+id/button5" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="Return home"
+        android:id="@+id/button5"
+        android:textSize="20dp"
+        android:layout_below="@+id/button4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/red"
+        android:textColor="@color/white" />
+</RelativeLayout>
