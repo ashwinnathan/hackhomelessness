@@ -22,7 +22,6 @@ public class Request_End extends AppCompatActivity implements View.OnClickListen
 
     private Button homebutton;
     private Button anotherbutton;
-    private EditText name;
 
     private GoogleApiClient client;
     private DatabaseReference firebaseRef;
@@ -39,7 +38,6 @@ public class Request_End extends AppCompatActivity implements View.OnClickListen
         setContentView(R.layout.req_end);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         homebutton = (Button)findViewById(R.id.homebutton);
-        name = (EditText)findViewById(R.id.name);
         homebutton.setOnClickListener(this);
         anotherbutton = (Button)findViewById(R.id.anotherbutton);
         anotherbutton.setOnClickListener(this);
