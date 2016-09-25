@@ -9,23 +9,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.os.Bundle;
+
 /**
- * Created by ashwinnathan on 9/24/16.
+ * Created by jzou on 9/25/16.
  */
+public class Give_Indlist extends AppCompatActivity implements View.OnClickListener{
 
-public class GiveInfo extends AppCompatActivity implements View.OnClickListener {
-
-    private Button eventbutton;
-    private Button mentorbutton;
-
+    private Button button;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.give_info);
+        setContentView(R.layout.give_indlist);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        eventbutton = (Button)findViewById(R.id.eventbutton);
-        eventbutton.setOnClickListener(this);
-        mentorbutton=(Button)findViewById(R.id.mentorbutton);
-        mentorbutton.setOnClickListener(this);
+        button = (Button)findViewById(R.id.button);
+        button.setOnClickListener(this);
         setSupportActionBar(toolbar);
 
     }
@@ -54,12 +50,8 @@ public class GiveInfo extends AppCompatActivity implements View.OnClickListener 
 
     public void onClick(View view)
     {
-        if ( view == eventbutton){
-            startActivity(new Intent(this,Give_OrgList.class));
-        }
-        if(view == mentorbutton)
-        {
-            startActivity(new Intent(this, Give_Indlist.class));
+        if ( view == button){
+            startActivity(new Intent(this,Give_Indlogin.class));
         }
     }
 }
