@@ -8,6 +8,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 /**
  * Created by jzou on 9/24/16.
@@ -16,14 +21,24 @@ public class RequestInfo extends AppCompatActivity implements View.OnClickListen
 
 
     private Button done;
+    private EditText name;
 
+    private GoogleApiClient client;
+    private DatabaseReference firebaseRef;
+
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("message");
+
+    private static final String TAG = "New Post Activity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.req_info);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         done = (Button)findViewById(R.id.donebutton);
+        name = (EditText)findViewById(R.id.name);
         done.setOnClickListener(this);
         setSupportActionBar(toolbar);
 
@@ -61,8 +76,9 @@ public class RequestInfo extends AppCompatActivity implements View.OnClickListen
 
     public void onClick(View view)
     {
-        if ( view == done)
-        {
+        if ( view == done){
+            String name_val = name.getText().toString();
+            myRef.setValue(name_val);
             startActivity(new Intent(this,Request_Choices.class));
         }
     }

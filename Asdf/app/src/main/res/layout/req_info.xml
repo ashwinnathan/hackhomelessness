@@ -64,12 +64,12 @@
                     android:id="@+id/phonetag"
                     android:textSize="30dp" />
 
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="phone"
-                    android:ems="10"
-                    android:id="@+id/phone" />
+                <!--<EditText-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:inputType="phone"-->
+                    <!--android:ems="10"-->
+                    <!--android:id="@+id/phone" />-->
 
                 <Space
                     android:layout_width="match_parent"
