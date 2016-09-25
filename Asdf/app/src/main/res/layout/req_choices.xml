@@ -10,7 +10,9 @@
         android:textSize="30dp"
         android:layout_marginTop="38dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/red"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -33,38 +35,17 @@
         android:layout_alignParentStart="true"
         android:background="@color/black" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Select"
-        android:id="@+id/button2"
-        android:background="@color/red"
-        android:textColor="@color/white"
-        android:layout_above="@+id/imageView"
-        android:layout_alignLeft="@+id/button3"
-        android:layout_alignStart="@+id/button3"
-        android:layout_marginBottom="5dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Select"
-        android:id="@+id/button3"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@color/red"
-        android:textColor="@color/white"
-        android:layout_marginBottom="5dp" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Need something?"
         android:id="@+id/something"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="190dp" />
+        android:layout_marginBottom="190dp"
+        android:textColor="@color/red"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -72,11 +53,23 @@
         android:text="Will place your request for organizations to see and you will receive a text if your request is fulfilled"
         android:id="@+id/textView2"
         android:textSize="20dp"
-        android:layout_above="@+id/button3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_marginTop="61dp"
+        android:layout_alignTop="@+id/something"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="35dp" />
+        android:layout_marginRight="30dp" />
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/onebutton"
+        android:alpha="0" />
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/somethingbutton"
+        android:alpha="0"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageView" />
 </RelativeLayout>
