@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if(view == give)
         {
-            startActivity(new Intent(this,GiveInfo.class));
+            startActivity(new Intent(this, GiveInfo.class));
         }
     }
 }

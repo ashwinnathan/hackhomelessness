@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/black">
 
     <ImageView
         android:layout_width="match_parent"
@@ -9,9 +10,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@drawable/something"
+        android:background="@drawable/talk"
         android:adjustViewBounds="false"
-        android:alpha=".5" />
+        android:alpha=".5"
+        android:scaleType="fitXY" />
 
     <ImageView
         android:layout_width="match_parent"
@@ -47,11 +49,11 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="10dp"
-        android:textColor="@color/black" />
+        android:textColor="@color/white" />
 
     <ImageView
         android:layout_width="fill_parent"
-        android:layout_height="10dp"
+        android:layout_height="30dp"
         android:id="@+id/imageView"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
@@ -81,13 +83,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:textColor="@color/black" />
+        android:textColor="@color/white" />
 
     <ImageButton
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:id="@+id/onebutton"
-        android:alpha="0" />
+        android:alpha="0"
+        android:scaleType="fitXY" />
 
     <ImageButton
         android:layout_width="match_parent"
