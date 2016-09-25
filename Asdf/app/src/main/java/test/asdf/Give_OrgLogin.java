@@ -21,7 +21,9 @@ public class Give_OrgLogin extends AppCompatActivity implements View.OnClickList
 
 
     private Button signup;
-    
+
+    private EditText name;
+
     private GoogleApiClient client;
     private DatabaseReference firebaseRef;
 
