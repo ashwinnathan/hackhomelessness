@@ -35,7 +35,7 @@ public class Request_Categories extends AppCompatActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.req_info);
+        setContentView(R.layout.req_cate);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         submit = (Button)findViewById(R.id.submitbutton);
         name = (EditText)findViewById(R.id.name);

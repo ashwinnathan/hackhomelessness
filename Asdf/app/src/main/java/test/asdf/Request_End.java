@@ -20,7 +20,8 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Request_End extends AppCompatActivity implements View.OnClickListener{
 
 
-    private Button done;
+    private Button homebutton;
+    private Button anotherbutton;
     private EditText name;
 
     private GoogleApiClient client;
@@ -35,11 +36,13 @@ public class Request_End extends AppCompatActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.req_info);
+        setContentView(R.layout.req_end);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        done = (Button)findViewById(R.id.donebutton);
+        homebutton = (Button)findViewById(R.id.homebutton);
         name = (EditText)findViewById(R.id.name);
-        done.setOnClickListener(this);
+        homebutton.setOnClickListener(this);
+        anotherbutton = (Button)findViewById(R.id.anotherbutton);
+        anotherbutton.setOnClickListener(this);
         setSupportActionBar(toolbar);
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -76,10 +79,13 @@ public class Request_End extends AppCompatActivity implements View.OnClickListen
 
     public void onClick(View view)
     {
-        if ( view == done){
-            String name_val = name.getText().toString();
-            myRef.setValue(name_val);
-            startActivity(new Intent(this,Request_Choices.class));
+        if ( view == homebutton)
+        {
+            startActivity(new Intent(this,MainActivity.class));
+        }
+        if(view == anotherbutton)
+        {
+            startActivity(new Intent(this, Request_Choices.class));
         }
     }
 

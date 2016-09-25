@@ -18,22 +18,22 @@
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:text="Make another request"
-        android:id="@+id/button4"
+        android:id="@+id/anotherbutton"
         android:layout_marginTop="82dp"
         android:textSize="20dp"
         android:background="@color/red"
         android:textColor="@color/white"
         android:layout_below="@+id/textView4"
-        android:layout_alignLeft="@+id/button5"
-        android:layout_alignStart="@+id/button5" />
+        android:layout_alignLeft="@+id/homebutton"
+        android:layout_alignStart="@+id/homebutton" />
 
     <Button
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:text="Return home"
-        android:id="@+id/button5"
+        android:id="@+id/homebutton"
         android:textSize="20dp"
-        android:layout_below="@+id/button4"
+        android:layout_below="@+id/anotherbutton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:background="@color/red"
