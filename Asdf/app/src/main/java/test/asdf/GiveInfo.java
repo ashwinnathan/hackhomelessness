@@ -1,6 +1,7 @@
 package test.asdf;
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -9,22 +10,24 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.os.Bundle;
+import android.widget.ImageButton;
+
 /**
  * Created by ashwinnathan on 9/24/16.
  */
 
 public class GiveInfo extends AppCompatActivity implements View.OnClickListener {
 
-    private Button eventbutton;
-    private Button mentorbutton;
+    private ImageButton eventbutton;
+    private ImageButton mentorbutton;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.give_info);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        eventbutton = (Button)findViewById(R.id.eventbutton);
+        eventbutton = (ImageButton)findViewById(R.id.eventbutton);
         eventbutton.setOnClickListener(this);
-        mentorbutton=(Button)findViewById(R.id.mentorbutton);
+        mentorbutton=(ImageButton)findViewById(R.id.mentorbutton);
         mentorbutton.setOnClickListener(this);
         setSupportActionBar(toolbar);
 
