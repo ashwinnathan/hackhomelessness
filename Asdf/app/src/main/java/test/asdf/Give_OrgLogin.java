@@ -78,9 +78,6 @@ public class Give_OrgLogin extends AppCompatActivity implements View.OnClickList
     public void onClick(View view)
     {
         if ( view == signup){
-            String name_val = name.getText().toString();
-            myRef.setValue(name_val);
-            
             startActivity(new Intent(this,Give_OrgSelect.class));
         }
     }

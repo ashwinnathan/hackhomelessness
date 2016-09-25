@@ -34,7 +34,7 @@ public class Give_OrgSelect extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.req_info);
+        setContentView(R.layout.give_orgselect);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         confirmbutton = (Button)findViewById(R.id.confirmbutton);
@@ -76,7 +76,7 @@ public class Give_OrgSelect extends AppCompatActivity implements View.OnClickLis
     public void onClick(View view)
     {
         if ( view == confirmbutton){
-            startActivity(new Intent(this,Request_Choices.class));
+            startActivity(new Intent(this,MainActivity.class));
         }
     }
 

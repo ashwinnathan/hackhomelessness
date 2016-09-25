@@ -76,8 +76,6 @@ public class Give_OrgList extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view)
     {
         if ( view == organize){
-            String name_val = organize.getText().toString();
-            myRef.setValue(name_val);
             startActivity(new Intent(this,Give_OrgLogin.class));
         }
     }
