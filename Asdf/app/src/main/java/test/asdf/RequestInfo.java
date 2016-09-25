@@ -14,6 +14,9 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by jzou on 9/24/16.
  */
@@ -27,7 +30,7 @@ public class RequestInfo extends AppCompatActivity implements View.OnClickListen
     private DatabaseReference firebaseRef;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference("message");
+    DatabaseReference myRef = database.getReference();
 
     private static final String TAG = "New Post Activity";
 
@@ -39,6 +42,7 @@ public class RequestInfo extends AppCompatActivity implements View.OnClickListen
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         done = (Button)findViewById(R.id.donebutton);
         name = (EditText)findViewById(R.id.name);
+        ((GlobalVar) this.getApplication()).setGlobalVarValue(name.getText().toString());
         done.setOnClickListener(this);
         setSupportActionBar(toolbar);
 
@@ -78,7 +82,9 @@ public class RequestInfo extends AppCompatActivity implements View.OnClickListen
     {
         if ( view == done){
             String name_val = name.getText().toString();
-            myRef.setValue(name_val);
+            Map<String, String> stuff = new HashMap<String,String>();
+            stuff.put(name_val,"");
+            myRef.setValue(stuff);
             startActivity(new Intent(this,Request_Choices.class));
         }
     }

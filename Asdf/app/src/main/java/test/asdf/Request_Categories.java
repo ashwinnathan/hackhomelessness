@@ -21,13 +21,13 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Request_Categories extends AppCompatActivity implements View.OnClickListener{
     private Button submit;
 
-    private EditText name;
+    private EditText item;
 
     private GoogleApiClient client;
     private DatabaseReference firebaseRef;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference("message");
+    DatabaseReference myRef;
 
     private static final String TAG = "New Post Activity";
 
@@ -38,8 +38,10 @@ public class Request_Categories extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.req_cate);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         submit = (Button)findViewById(R.id.submitbutton);
-        name = (EditText)findViewById(R.id.name);
+        item = (EditText)findViewById(R.id.clothing);
         submit.setOnClickListener(this);
+        String name =  ((GlobalVar) this.getApplication()).getGlobalVarValue();
+        myRef = database.getReference(name);
         setSupportActionBar(toolbar);
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -77,8 +79,7 @@ public class Request_Categories extends AppCompatActivity implements View.OnClic
     public void onClick(View view)
     {
         if ( view == submit){
-            String name_val = name.getText().toString();
-            myRef.setValue(name_val);
+            myRef.setValue(item);
             startActivity(new Intent(this,Request_End.class));
         }
     }

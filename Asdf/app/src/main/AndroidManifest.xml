@@ -3,6 +3,7 @@
     package="test.asdf">
 
     <application
+        android:name=".GlobalVar"
         android:allowBackup="true"
         android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
