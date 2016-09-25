@@ -17,13 +17,15 @@
                 android:layout_width="fill_parent"
                 android:layout_height="40dp"
                 android:text="shoes, jacket"
-                android:id="@+id/checkBox"
+                android:id="@+id/checkBox1"
                 android:layout_marginLeft="60dp"
                 android:layout_marginTop="20dp"
                 android:textColor="@color/white"
                 android:textSize="20dp"
                 android:background="@color/blu"
-                android:layout_marginRight="20dp" />
+                android:layout_marginRight="20dp"
+                android:checked="false"
+                android:visibility="visible" />
 
             <CheckBox
                 android:layout_width="fill_parent"
@@ -36,7 +38,8 @@
                 android:textSize="20dp"
                 android:background="@color/blu"
                 android:layout_marginRight="20dp"
-                android:checked="false" />
+                android:checked="false"
+                android:visibility="visible" />
 
             <CheckBox
                 android:layout_width="fill_parent"
@@ -49,7 +52,8 @@
                 android:textSize="20dp"
                 android:background="@color/blu"
                 android:layout_marginRight="20dp"
-                android:checked="false" />
+                android:checked="false"
+                android:visibility="visible" />
 
             <CheckBox
                 android:layout_width="fill_parent"
@@ -62,7 +66,22 @@
                 android:textSize="20dp"
                 android:background="@color/blu"
                 android:layout_marginRight="20dp"
-                android:checked="false" />
+                android:checked="false"
+                android:visibility="visible" />
+
+            <CheckBox
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:text="tent, blanket"
+                android:id="@+id/checkBox5"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:background="@color/blu"
+                android:layout_marginRight="20dp"
+                android:checked="false"
+                android:visibility="visible" />
 
         </LinearLayout>
     </ScrollView>

@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import java.util.Map;
+import java.util.HashMap;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.database.DatabaseReference;
@@ -25,6 +27,7 @@ public class Request_Categories extends AppCompatActivity implements View.OnClic
 
     private GoogleApiClient client;
     private DatabaseReference firebaseRef;
+    String name;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef;
@@ -40,7 +43,7 @@ public class Request_Categories extends AppCompatActivity implements View.OnClic
         submit = (Button)findViewById(R.id.submitbutton);
         item = (EditText)findViewById(R.id.clothing);
         submit.setOnClickListener(this);
-        String name =  ((GlobalVar) this.getApplication()).getGlobalVarValue();
+        name =  ((GlobalVar) this.getApplication()).getGlobalVarValue();
         myRef = database.getReference(name);
         setSupportActionBar(toolbar);
 
@@ -79,7 +82,10 @@ public class Request_Categories extends AppCompatActivity implements View.OnClic
     public void onClick(View view)
     {
         if ( view == submit){
-            myRef.setValue(item);
+            Map<String, String> map = new HashMap<String, String>();
+            map.put("hehe xd",item.getText().toString());
+            myRef.setValue(map);
+            myRef.push();
             startActivity(new Intent(this,Request_End.class));
         }
     }

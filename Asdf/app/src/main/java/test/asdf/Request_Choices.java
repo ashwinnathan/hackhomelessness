@@ -66,7 +66,7 @@ public class Request_Choices extends AppCompatActivity implements View.OnClickLi
     {
         if ( view == onebutton)
         {
-            startActivity(new Intent(this,Request_Choices.class));
+            startActivity(new Intent(this,Request_1on1.class));
         }
         if(view == somethingbutton)
         {

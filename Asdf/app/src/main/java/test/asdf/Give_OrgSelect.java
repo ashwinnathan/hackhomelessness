@@ -4,20 +4,30 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.CheckBox;
 
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by jzou on 9/24/16.
  */
-public class Give_OrgSelect extends AppCompatActivity implements View.OnClickListener{
+public class Give_OrgSelect extends AppCompatActivity implements View.OnClickListener, ValueEventListener{
 
 
     private Button confirmbutton;
@@ -26,7 +36,7 @@ public class Give_OrgSelect extends AppCompatActivity implements View.OnClickLis
     private DatabaseReference firebaseRef;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference("message");
+    DatabaseReference myRef = database.getReference();
 
     private static final String TAG = "New Post Activity";
 
@@ -40,6 +50,40 @@ public class Give_OrgSelect extends AppCompatActivity implements View.OnClickLis
         confirmbutton = (Button)findViewById(R.id.confirm);
         confirmbutton.setOnClickListener(this);
         setSupportActionBar(toolbar);
+        myRef.addValueEventListener(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                CheckBox text1 = (CheckBox)findViewById(R.id.checkBox1);
+                CheckBox text2 = (CheckBox)findViewById(R.id.checkBox2);
+                CheckBox text3 = (CheckBox)findViewById(R.id.checkBox3);
+                CheckBox text4 = (CheckBox)findViewById(R.id.checkBox4);
+                CheckBox text5 = (CheckBox)findViewById(R.id.checkBox5);
+                CheckBox[] checks = {text1, text2, text3, text4, text5};
+                int count = 1;
+                /*for( child : dataSnapshot.getValue())
+                {
+                    String[] ar = (String[])child;
+                    checks[count].setText(ar[2]);
+                    checks[count].setVisibility(View.VISIBLE);
+
+                    count++;
+
+                }*/
+                text5.setText(count+"");
+                text5.setVisibility(View.VISIBLE);
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -79,5 +123,13 @@ public class Give_OrgSelect extends AppCompatActivity implements View.OnClickLis
             startActivity(new Intent(this,MainActivity.class));
         }
     }
+    @Override
+    public void onDataChange(DataSnapshot dataSnapshot) {
 
+    }
+
+    @Override
+    public void onCancelled(DatabaseError databaseError) {
+
+    }
 }
