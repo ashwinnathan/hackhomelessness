@@ -44,7 +44,7 @@
         android:inputType="phone"
         android:ems="10"
         android:id="@+id/phoneNumInput"
-        android:layout_below="@+id/phone#Label"
+        android:layout_below="@+id/phoneNumLabel"
         android:layout_alignLeft="@+id/nameInput"
         android:layout_alignStart="@+id/nameInput"
         android:hint="(###)###-####" />
@@ -57,8 +57,8 @@
         android:ems="10"
         android:id="@+id/emailLabel"
         android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/phone#Label"
-        android:layout_alignStart="@+id/phone#Label" />
+        android:layout_alignLeft="@+id/phoneNumLabel"
+        android:layout_alignStart="@+id/phoneNumLabel" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -66,8 +66,8 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:layout_below="@+id/emailLabel"
-        android:layout_alignRight="@+id/phone#Input"
-        android:layout_alignEnd="@+id/phone#Input"
+        android:layout_alignRight="@+id/phoneNumInput"
+        android:layout_alignEnd="@+id/phoneNumInput"
         android:layout_marginRight="23dp"
         android:layout_marginEnd="23dp"
         android:id="@+id/emailInput"
