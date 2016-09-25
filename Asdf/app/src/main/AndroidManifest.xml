@@ -25,7 +25,7 @@
             android:label="Asdf"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-<<<<<<< HEAD
+
         <activity android:name=".GiveInfo"
             android:label="Asdf" android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".Request_Choices"
@@ -35,18 +35,6 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
         <uses-permission android:name="android.permission.INTERNET"/>
-=======
-        <activity
-            android:name=".GiveInfo"
-            android:label="Asdf"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity
-            android:name=".Request_Choices"
-            android:label="Asdf"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
->>>>>>> dc3c51776726291f98fee385449e7d5c6393a61a
     </application>
 
 </manifest>
