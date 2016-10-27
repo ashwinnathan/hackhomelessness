@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -24,7 +23,7 @@ public class Give_OrgLogin extends AppCompatActivity implements View.OnClickList
 
     private EditText name;
 
-    private GoogleApiClient client;
+
     private DatabaseReference firebaseRef;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();

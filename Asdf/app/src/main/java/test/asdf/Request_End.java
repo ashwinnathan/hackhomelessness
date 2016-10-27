@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -23,7 +22,6 @@ public class Request_End extends AppCompatActivity implements View.OnClickListen
     private Button homebutton;
     private Button anotherbutton;
 
-    private GoogleApiClient client;
     private DatabaseReference firebaseRef;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();

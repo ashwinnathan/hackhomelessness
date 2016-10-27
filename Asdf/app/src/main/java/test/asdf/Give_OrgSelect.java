@@ -13,7 +13,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.CheckBox;
 
-import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,7 +31,6 @@ public class Give_OrgSelect extends AppCompatActivity implements View.OnClickLis
 
     private Button confirmbutton;
 
-    private GoogleApiClient client;
     private DatabaseReference firebaseRef;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();

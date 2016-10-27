@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "868979006916",
-    "firebase_url": "https://hack-homeless.firebaseio.com",
-    "project_id": "hack-homeless",
-    "storage_bucket": "hack-homeless.appspot.com"
+    "project_number": "642003868423",
+    "firebase_url": "https://hackhomelessness-410df.firebaseio.com",
+    "project_id": "hackhomelessness-410df",
+    "storage_bucket": "hackhomelessness-410df.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:868979006916:android:16d5dd0b3c98df19",
+        "mobilesdk_app_id": "1:642003868423:android:16d5dd0b3c98df19",
         "android_client_info": {
           "package_name": "test.asdf"
         }
       },
       "oauth_client": [
         {
-          "client_id": "868979006916-b785ls3b0n50oev8aomj5klr99giplcc.apps.googleusercontent.com",
+          "client_id": "642003868423-pagv39l7iluukg28kksg3f4jc4e6ecjh.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "test.asdf",
-            "certificate_hash": "91372FDCAB571510D32D763559D8925B210481B2"
+            "certificate_hash": "97CA3962AD4BCC2832F8ED1A318488743AC7A2A1"
           }
         },
         {
-          "client_id": "868979006916-kvn263kon1s1ctmrdv8kcmb682cd1c5a.apps.googleusercontent.com",
+          "client_id": "642003868423-5nh6scbfu4ahefmo16vd6hbiuut69ob0.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCoYJJ46jwbl4j6H7criE6VlECUUhSGRP0"
+          "current_key": "AIzaSyA9xNVz7iR_5BcGprQ4M_UvC2qjQ0SnVqI"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "868979006916-kvn263kon1s1ctmrdv8kcmb682cd1c5a.apps.googleusercontent.com",
+              "client_id": "642003868423-5nh6scbfu4ahefmo16vd6hbiuut69ob0.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
