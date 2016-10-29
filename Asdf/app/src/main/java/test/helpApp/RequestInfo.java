@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -28,11 +27,10 @@ public class RequestInfo extends AppCompatActivity implements View.OnClickListen
     private Button done;
     private EditText name;
 
-    private GoogleApiClient client;
     private DatabaseReference firebaseRef;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference();
+    DatabaseReference myRef;
 
     private static final String TAG = "New Post Activity";
 
@@ -84,9 +82,8 @@ public class RequestInfo extends AppCompatActivity implements View.OnClickListen
     {
         if ( view == done){
             String name_val = name.getText().toString();
-            Map<String, String> stuff = new HashMap<String,String>();
-            stuff.put(name_val,"");
-            myRef.setValue(stuff);
+            myRef=database.getReference(name_val);
+            myRef.setValue("Testing");
             startActivity(new Intent(this,Request_Choices.class));
         }
     }

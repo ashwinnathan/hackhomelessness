@@ -12,7 +12,6 @@ import android.widget.EditText;
 import java.util.Map;
 import java.util.HashMap;
 
-import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -27,7 +26,6 @@ public class Request_Categories extends AppCompatActivity implements View.OnClic
 
     private EditText item;
 
-    private GoogleApiClient client;
     private DatabaseReference firebaseRef;
     String name;
 
