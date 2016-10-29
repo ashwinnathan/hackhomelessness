@@ -1,4 +1,4 @@
-package test.asdf;
+package test.helpApp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,38 +7,28 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ImageButton;
 
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import test.asdf.R;
 
 /**
- * Created by jzou on 9/24/16.
+ * Created by ashwinnathan on 9/24/16.
  */
-public class Request_1on1 extends AppCompatActivity implements View.OnClickListener{
 
+public class Request_Choices extends AppCompatActivity implements View.OnClickListener {
 
-    private Button req;
+    private ImageButton onebutton;
+    private ImageButton somethingbutton;
 
-    private GoogleApiClient client;
-    private DatabaseReference firebaseRef;
-
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference("message");
-
-    private static final String TAG = "New Post Activity";
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.req_1on1);
+        setContentView(R.layout.req_choices);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        req = (Button)findViewById(R.id.request);
-        req.setOnClickListener(this);
         setSupportActionBar(toolbar);
+        onebutton=(ImageButton)findViewById(R.id.onebutton);
+        onebutton.setOnClickListener(this);
+        somethingbutton=(ImageButton)findViewById(R.id.somethingbutton);
+        somethingbutton.setOnClickListener(this);
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -74,9 +64,13 @@ public class Request_1on1 extends AppCompatActivity implements View.OnClickListe
 
     public void onClick(View view)
     {
-        if ( view == req){
-            startActivity(new Intent(this,Request_End.class));
+        if ( view == onebutton)
+        {
+            startActivity(new Intent(this,Request_1on1.class));
+        }
+        if(view == somethingbutton)
+        {
+            startActivity(new Intent(this,Request_Categories.class));
         }
     }
-
 }

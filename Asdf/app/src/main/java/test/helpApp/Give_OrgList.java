@@ -1,4 +1,4 @@
-package test.asdf;
+package test.helpApp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,20 +8,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import test.asdf.R;
+
 /**
  * Created by jzou on 9/24/16.
  */
-public class Request_End extends AppCompatActivity implements View.OnClickListener{
+public class Give_OrgList extends AppCompatActivity implements View.OnClickListener{
 
 
-    private Button homebutton;
-    private Button anotherbutton;
+    private Button organize;
 
     private GoogleApiClient client;
     private DatabaseReference firebaseRef;
@@ -35,12 +35,11 @@ public class Request_End extends AppCompatActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.req_end);
+        setContentView(R.layout.give_list);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        homebutton = (Button)findViewById(R.id.homebutton);
-        homebutton.setOnClickListener(this);
-        anotherbutton = (Button)findViewById(R.id.anotherbutton);
-        anotherbutton.setOnClickListener(this);
+
+        organize = (Button)findViewById(R.id.organizebutton);
+        organize.setOnClickListener(this);
         setSupportActionBar(toolbar);
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -77,13 +76,8 @@ public class Request_End extends AppCompatActivity implements View.OnClickListen
 
     public void onClick(View view)
     {
-        if ( view == homebutton)
-        {
-            startActivity(new Intent(this,MainActivity.class));
-        }
-        if(view == anotherbutton)
-        {
-            startActivity(new Intent(this, Request_Choices.class));
+        if ( view == organize){
+            startActivity(new Intent(this,Give_OrgLogin.class));
         }
     }
 

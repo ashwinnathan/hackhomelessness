@@ -1,4 +1,4 @@
-package test.asdf;
+package test.helpApp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +15,8 @@ import java.util.HashMap;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import test.asdf.R;
 
 /**
  * Created by Rohit on 9/25/2016.
@@ -82,9 +84,9 @@ public class Request_Categories extends AppCompatActivity implements View.OnClic
     public void onClick(View view)
     {
         if ( view == submit){
-            Map<String, String> map = new HashMap<String, String>();
+            Map<String, Object> map = new HashMap<String, Object>();
             map.put("hehe xd",item.getText().toString());
-            myRef.setValue(map);
+            myRef.updateChildren(map);
             myRef.push();
             startActivity(new Intent(this,Request_End.class));
         }

@@ -1,4 +1,4 @@
-package test.asdf;
+package test.helpApp;
 
 import android.app.Application;
 

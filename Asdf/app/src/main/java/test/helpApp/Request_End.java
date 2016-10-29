@@ -1,4 +1,4 @@
-package test.asdf;
+package test.helpApp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,21 +8,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import test.asdf.R;
+
 /**
  * Created by jzou on 9/24/16.
  */
-public class Give_OrgLogin extends AppCompatActivity implements View.OnClickListener{
+public class Request_End extends AppCompatActivity implements View.OnClickListener{
 
 
-    private Button signup;
-
-    private EditText name;
+    private Button homebutton;
+    private Button anotherbutton;
 
     private GoogleApiClient client;
     private DatabaseReference firebaseRef;
@@ -36,11 +36,12 @@ public class Give_OrgLogin extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.give_orglogin);
+        setContentView(R.layout.req_end);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        signup = (Button)findViewById(R.id.confirmbutton);
-        name = (EditText)findViewById(R.id.nameInputField);
-        signup.setOnClickListener(this);
+        homebutton = (Button)findViewById(R.id.homebutton);
+        homebutton.setOnClickListener(this);
+        anotherbutton = (Button)findViewById(R.id.anotherbutton);
+        anotherbutton.setOnClickListener(this);
         setSupportActionBar(toolbar);
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -77,8 +78,13 @@ public class Give_OrgLogin extends AppCompatActivity implements View.OnClickList
 
     public void onClick(View view)
     {
-        if ( view == signup){
-            startActivity(new Intent(this,Give_OrgSelect.class));
+        if ( view == homebutton)
+        {
+            startActivity(new Intent(this,MainActivity.class));
+        }
+        if(view == anotherbutton)
+        {
+            startActivity(new Intent(this, Request_Choices.class));
         }
     }
 

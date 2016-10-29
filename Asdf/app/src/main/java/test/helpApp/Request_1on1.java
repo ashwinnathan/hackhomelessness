@@ -1,4 +1,4 @@
-package test.asdf;
+package test.helpApp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,19 +8,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import test.asdf.R;
+
 /**
  * Created by jzou on 9/24/16.
  */
-public class Give_OrgList extends AppCompatActivity implements View.OnClickListener{
+public class Request_1on1 extends AppCompatActivity implements View.OnClickListener{
 
 
-    private Button organize;
+    private Button req;
 
     private GoogleApiClient client;
     private DatabaseReference firebaseRef;
@@ -34,11 +35,10 @@ public class Give_OrgList extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.give_list);
+        setContentView(R.layout.req_1on1);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-
-        organize = (Button)findViewById(R.id.organizebutton);
-        organize.setOnClickListener(this);
+        req = (Button)findViewById(R.id.request);
+        req.setOnClickListener(this);
         setSupportActionBar(toolbar);
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -75,8 +75,8 @@ public class Give_OrgList extends AppCompatActivity implements View.OnClickListe
 
     public void onClick(View view)
     {
-        if ( view == organize){
-            startActivity(new Intent(this,Give_OrgLogin.class));
+        if ( view == req){
+            startActivity(new Intent(this,Request_End.class));
         }
     }
 

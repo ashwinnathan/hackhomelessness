@@ -46,10 +46,10 @@
 
     <ImageView
         android:layout_width="10dp"
-        android:layout_height="350dp"
+        android:layout_height="400dp"
         android:id="@+id/bottomline"
         android:background="@color/white"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/homehelp"
         android:layout_centerHorizontal="true" />
 
     <TextView

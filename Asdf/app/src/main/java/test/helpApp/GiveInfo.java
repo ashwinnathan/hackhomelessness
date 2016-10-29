@@ -1,27 +1,33 @@
-package test.asdf;
+package test.helpApp;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.os.Bundle;
+import android.widget.ImageButton;
+
+import test.asdf.R;
 
 /**
- * Created by jzou on 9/25/16.
+ * Created by ashwinnathan on 9/24/16.
  */
-public class Give_Indlist extends AppCompatActivity implements View.OnClickListener{
 
-    private Button button;
+public class GiveInfo extends AppCompatActivity implements View.OnClickListener {
+
+    private ImageButton eventbutton;
+    private ImageButton mentorbutton;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.give_indlist);
+        setContentView(R.layout.give_info);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        button = (Button)findViewById(R.id.button);
-        button.setOnClickListener(this);
+        eventbutton = (ImageButton)findViewById(R.id.eventbutton);
+        eventbutton.setOnClickListener(this);
+        mentorbutton=(ImageButton)findViewById(R.id.mentorbutton);
+        mentorbutton.setOnClickListener(this);
         setSupportActionBar(toolbar);
 
     }
@@ -50,8 +56,12 @@ public class Give_Indlist extends AppCompatActivity implements View.OnClickListe
 
     public void onClick(View view)
     {
-        if ( view == button){
-            startActivity(new Intent(this,Give_Indlogin.class));
+        if ( view == eventbutton){
+            startActivity(new Intent(this,Give_OrgList.class));
+        }
+        if(view == mentorbutton)
+        {
+            startActivity(new Intent(this, Give_Indlist.class));
         }
     }
 }

@@ -3,7 +3,7 @@
     package="test.asdf">
 
     <application
-        android:name=".GlobalVar"
+        android:name="test.helpApp.GlobalVar"
         android:allowBackup="true"
         android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="test.helpApp.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -22,35 +22,35 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RequestInfo"
+            android:name="test.helpApp.RequestInfo"
             android:label="Asdf"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
-        <activity android:name=".GiveInfo"
+        <activity android:name="test.helpApp.GiveInfo"
             android:label="Asdf" android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Request_Choices"
+        <activity android:name="test.helpApp.Request_Choices"
             android:label="Asdf" android:theme="@style/AppTheme.NoActionBar"></activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
-        <activity android:name=".Request_Categories"
+        <activity android:name="test.helpApp.Request_Categories"
             android:label="Asdf" android:theme="@style/AppTheme.NoActionBar"></activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
-        <activity android:name=".Request_End"
+        <activity android:name="test.helpApp.Request_End"
             android:label="Asdf" android:theme="@style/AppTheme.NoActionBar"></activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
-        <activity android:name=".Request_1on1"
+        <activity android:name="test.helpApp.Request_1on1"
             android:label="Asdf" android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Give_Indlist"
+        <activity android:name="test.helpApp.Give_Indlist"
             android:label="Asdf" android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Give_OrgList"
+        <activity android:name="test.helpApp.Give_OrgList"
             android:label="Asdf" android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Give_Indlogin"
+        <activity android:name="test.helpApp.Give_Indlogin"
             android:label="Asdf" android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Give_Indselect"
+        <activity android:name="test.helpApp.Give_Indselect"
             android:label="Asdf" android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Give_OrgLogin"
+        <activity android:name="test.helpApp.Give_OrgLogin"
             android:label="Asdf" android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Give_OrgSelect"
+        <activity android:name="test.helpApp.Give_OrgSelect"
             android:label="Asdf" android:theme="@style/AppTheme.NoActionBar"></activity>
         <meta-data
             android:name="com.google.android.gms.version"

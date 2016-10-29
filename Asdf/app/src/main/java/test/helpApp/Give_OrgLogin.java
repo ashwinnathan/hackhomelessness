@@ -1,4 +1,4 @@
-package test.asdf;
+package test.helpApp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,26 +9,41 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
+
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import test.asdf.R;
 
 /**
- * Created by ashwinnathan on 9/24/16.
+ * Created by jzou on 9/24/16.
  */
+public class Give_OrgLogin extends AppCompatActivity implements View.OnClickListener{
 
-public class Request_Choices extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageButton onebutton;
-    private ImageButton somethingbutton;
+    private Button signup;
 
+    private EditText name;
+
+    private GoogleApiClient client;
+    private DatabaseReference firebaseRef;
+
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("message");
+
+    private static final String TAG = "New Post Activity";
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.req_choices);
+
+        setContentView(R.layout.give_orglogin);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        signup = (Button)findViewById(R.id.confirmbutton);
+        name = (EditText)findViewById(R.id.nameInputField);
+        signup.setOnClickListener(this);
         setSupportActionBar(toolbar);
-        onebutton=(ImageButton)findViewById(R.id.onebutton);
-        onebutton.setOnClickListener(this);
-        somethingbutton=(ImageButton)findViewById(R.id.somethingbutton);
-        somethingbutton.setOnClickListener(this);
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -64,13 +79,9 @@ public class Request_Choices extends AppCompatActivity implements View.OnClickLi
 
     public void onClick(View view)
     {
-        if ( view == onebutton)
-        {
-            startActivity(new Intent(this,Request_1on1.class));
-        }
-        if(view == somethingbutton)
-        {
-            startActivity(new Intent(this,Request_Categories.class));
+        if ( view == signup){
+            startActivity(new Intent(this,Give_OrgSelect.class));
         }
     }
+
 }

@@ -1,22 +1,16 @@
-package test.asdf;
+package test.helpApp;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
-import java.util.HashMap;
-import java.util.Map;
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
+import android.widget.CheckBox;
+
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -24,15 +18,21 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, ValueEventListener {
+import test.asdf.R;
 
-    private Button request;
-    private Button give;
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
+/**
+ * Created by jzou on 9/24/16.
+ */
+public class Give_OrgSelect extends AppCompatActivity implements View.OnClickListener, ValueEventListener{
+
+
+    private Button confirmbutton;
+
     private GoogleApiClient client;
+    private DatabaseReference firebaseRef;
+
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference();
 
     private static final String TAG = "New Post Activity";
 
@@ -40,18 +40,46 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-//        Map<String, Object> childUpdates = new HashMap<>();
-//        childUpdates.put("testkey", "testval");
-//        firebaseRef.updateChildren(childUpdates);
-        setContentView(R.layout.home);
+        setContentView(R.layout.give_orgselect);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
+        confirmbutton = (Button)findViewById(R.id.confirm);
+        confirmbutton.setOnClickListener(this);
         setSupportActionBar(toolbar);
-        request = (Button) findViewById(R.id.request);
-        give = (Button) findViewById(R.id.give);
-        request.setOnClickListener(this);
-        give.setOnClickListener(this);
+        myRef.addValueEventListener(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                CheckBox text1 = (CheckBox)findViewById(R.id.checkBox1);
+                CheckBox text2 = (CheckBox)findViewById(R.id.checkBox2);
+                CheckBox text3 = (CheckBox)findViewById(R.id.checkBox3);
+                CheckBox text4 = (CheckBox)findViewById(R.id.checkBox4);
+                CheckBox text5 = (CheckBox)findViewById(R.id.checkBox5);
+                CheckBox[] checks = {text1, text2, text3, text4, text5};
+                int count = 1;
+                /*for( child : dataSnapshot.getValue())
+                {
+                    String[] ar = (String[])child;
+                    checks[count].setText(ar[2]);
+                    checks[count].setVisibility(View.VISIBLE);
+
+                    count++;
+
+                }*/
+                text5.setText(count+"");
+                text5.setVisibility(View.VISIBLE);
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -61,10 +89,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         .setAction("Action", null).show();
             }
         }); */
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
-
     }
 
     @Override
@@ -89,18 +113,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return super.onOptionsItemSelected(item);
     }
 
-    public void onClick(View view) {
-        if (view == request) {
-            startActivity(new Intent(this, RequestInfo.class));
-        }
-
-        if(view == give)
-        {
-            startActivity(new Intent(this, GiveInfo.class));
+    public void onClick(View view)
+    {
+        if ( view == confirmbutton){
+            startActivity(new Intent(this,MainActivity.class));
         }
     }
-
-
     @Override
     public void onDataChange(DataSnapshot dataSnapshot) {
 
